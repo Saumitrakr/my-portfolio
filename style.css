@@ -105,6 +105,7 @@ body{
     flex: 1;
     color: rgb(250,250,250);
     margin-top: -7rem;
+    
 }
 .hero .right h6{
     font-size: 1.6rem;
@@ -112,7 +113,7 @@ body{
     margin-bottom: 0.5rem;
 }
 .hero .right h1{
-    font-size: 4rem;
+    font-size: min(8vh,8vw);
     font-weight: 100;
     line-height: 1.2;
     margin-bottom: 2rem;
@@ -123,9 +124,11 @@ body{
 .hero .right p{
     line-height: 1.9;
     margin-bottom: 2rem;
+    text-align: justify;
+    margin-right: 5rem;
 }
 section{
-    padding: 6rem;
+    padding: 3vw;
 }
 section.about .container{
     display: flex;
@@ -151,36 +154,242 @@ section.about h3{
     margin-bottom: 1rem;
     font-weight: 600;
 }
+.socials{
+    display: flex;
+    justify-content: space-around;
+}
+section.services{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+    background-color: rgb(26, 23, 23);
+}
+.services-head{
+    color: rgb(250,250,250);
+    margin-bottom: 1rem;
+}
+
+section.services .card-grid{
+    display: flex;
+    margin: 45px 0px;
+}
 section.services .card-grid .card{
-    background: rgb(250,250,250);
+    background: rgb(58 91 86);
     padding: 3rem 2rem;
+    margin: 2rem 1rem;
     position: relative;
     text-align: center;
     transition: all 0.2s ease;
 }
 section.services .card-grid .card img{
     position: absolute;
+    width: 50%;
     top: -1.5rem;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%,-40%);
     
 }
 section.services .card-grid .card h2{
     font-weight: 600;
     font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    color: rgb(163, 147, 122);
+    
 }
 section.services .card-grid .card p{
     font-family: "Lato", sans-serif;
-    color: rgb(0,59,50);
+    color: rgb(12,12,12);
     line-height: 1.6;
+    ;
 }
 section.services .card-grid .card:hover{
     background: rgb(29,221,189);
+    
 }
 section.services .card-grid .card:hover h2{
-    color: rgb(250,250,250);
+    color: black;
 }
 section.services .card-grid .card:hover p{
-    color: rgb(250,250,250);
+    color: rgb(0,59,50);
 }
+footer{
+    background-color: rgb(12,12,12);
+}
+
+@media (max-width: 1060px) {
+    /* Adjustments for smaller screens */
+  
+    /* Header */
+    header{
+        clip-path: polygon(0 0,100% 0, 100% 100%, 73% 94%,0 105% );
+    }
+    header nav .left a {
+      margin-right: 1rem;
+    }
+    header nav .left{
+        font-size: min(3vw,3vh);
+    }
+  
+    header nav .logo img {
+      width: 30px;
+      height: 45px;
+    }
+  
+    /* Buttons */
+    .btn-1 {
+      width: 80px;
+      padding: 6px 10px;
+    }
+  
+    .btn-2 {
+      width: 140px;
+      margin-top: 2vw;
+      margin-left: 5vw;
+      padding: 6px 8px;
+    }
+  
+    /* Hero */
+    .hero {
+        margin: auto;
+        max-width: 760px;
+      flex-direction: column;
+      padding-bottom: 2rem;
+    }
+  
+    .hero .left img {
+      width: 300px;
+      height: 400px;
+      margin: 40px;
+    }
+  
+    .hero .right {
+      margin-top: 0rem;
+    }
+  
+    .hero .right h1 {
+      font-size: 5vw;
+      margin-left: 10vw;
+    }
+    .hero .right h6 {
+      font-size: 2vw;
+      margin-left: 10vw;
+    }
+  
+    .hero .right p {
+      max-width: 75%;
+      font-size: 2vw;
+      margin: 4vw auto;
+    }
+  
+    /* Section About */
+
+
+    section.about .container {
+      flex-direction: column;
+    }
+  
+    section.about .left {
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+  
+    section.about .right {
+      margin-bottom: 2rem;
+    }
+    section.about .right h1{
+        font-size: 5vw;
+      margin-left: 10vw;
+    }
+    section.about .right h3{
+        font-size: 3vw;
+      margin-left: 10vw;
+    }
+    section.about .right p{
+        font-size: 2.5vw;
+        max-width: 75%;
+      margin: 3vw auto;
+    }
+    .socials img{
+        width: 120px;
+    }
+  
+    /* Services Cards */
+    section.serices{
+        padding: 0;
+    }
+    section.services .card-grid {
+      flex-direction: column;
+      margin: 30px 0px;
+    }
+  
+    section.services .card-grid .card {
+      padding: 2rem;
+      max-width: 100%;
+      margin: 4rem 0;
+    }
+  
+    section.services .card-grid .card img {
+      width: 200px;
+      top: -3rem;
+    }
+  
+    /* Footer */
+    footer {
+      padding: 1rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    /* Header */
+    header nav .left a {
+      margin-right: 1rem;
+    }
+  
+    header nav .logo img {
+      width: 30px;
+      height: 45px;
+    }
+    .hero .left img{
+        width: 200px;
+        height: 300px;
+    }
+  
+    /* About Section */
+    section.about .container {
+      flex-direction: column;
+    }
+  
+    section.about .left {
+      justify-content: center;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  
+    section.about .right {
+      margin-bottom: 2rem;
+    }
+  
+    section.about h1 {
+      font-size: 2.5rem;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+  
+    section.about h3 {
+      font-size: 1.5rem;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+  
+    section.about p {
+      font-size: 1.2rem;
+      max-width: 90%;
+      margin: auto;
+      text-align: justify;
+    }
+  }
+  
